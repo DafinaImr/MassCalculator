@@ -1,0 +1,24 @@
+[submodule "libmasscalculator"]
+	path = libmasscalculator
+	url = https://github.com/MassCalculator/libmasscalculator
+	branch = master
+[submodule "gui"]
+	path = gui
+	url = https://github.com/masscalculator/gui
+	branch = master
+[submodule "cli"]
+	path = cli
+	url = https://github.com/masscalculator/cli
+	branch = master
+[submodule "docs"]
+	path = docs
+	url = https://github.com/masscalculator/docs
+	branch = master
+[submodule "examples"]
+	path = examples
+	url = https://github.com/masscalculator/examples
+	branch = master
+[submodule "docker"]
+	path = docker
+	url = https://github.com/masscalculator/docker
+	branch = master
