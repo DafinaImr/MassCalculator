@@ -1,2 +1,8 @@
-.vscode
+.vscode/
 build/
+docs/
+Testing/
+doxygen_warnings.log
+.buildconfig
+CMakeLists.txt.user
+local

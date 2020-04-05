@@ -42,6 +42,8 @@ set(CMAKE_CXX_FLAGS
     -Wno-unused"
 )
 
+find_package(GTest REQUIRED >= 1.8)
+
 # Only do these if this is the main project, and not if it is included through add_subdirectory
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
@@ -68,42 +70,13 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     endif()
 endif()
 
-# find_package(Eigen3 REQUIRED NO_MODULE)
-# find_package(GTest REQUIRED >= 1.8)
-
-# # Enable testing
-# enable_testing()
-# include(CTest) #To get the info for tests from CTestConfig.cmake
-
-# # to include static libraries in shared libraries, they need to be compiled with -fPIC
-# set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-
-# ##############
-# ##  Targets ##
-# ##############
-# #
-
-# #@todo check the CMake structure to modern CMake
-# # add_custom_target(debug
-# #   COMMAND ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE=Debug ${CMAKE_SOURCE_DIR}
-# #   COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target all
-# #   COMMAND ${CMAKE_COMMAND} add_compile_definitions(ROOT_PATH=${CMAKE_CURRENT_SOURCE_DIR} DEBUG)
-# #   COMMENT "Switch CMAKE_BUILD_TYPE to Debug"
-# #   )
-
-# # add_custom_target(release
-# #   COMMAND ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE=Release ${CMAKE_SOURCE_DIR}
-# #   COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target all
-# #   COMMENT "Switch CMAKE_BUILD_TYPE to Release"
-# #   )
-
 # add_compile_definitions(ROOT_PATH=${CMAKE_CURRENT_SOURCE_DIR} DEBUG)
 
-# # add_subdirectory(libmasscalculator)
-# # add_subdirectory(cli)
-# # add_subdirectory(gui)
+add_subdirectory(libmasscalculator)
+# add_subdirectory(cli)
+# add_subdirectory(gui)
 # add_subdirectory(docs)
-# # add_subdirectory(docker)
+# add_subdirectory(docker)
 
 # ###############
 # ## Packaging ##
